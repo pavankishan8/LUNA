@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { LogInPageComponent } from './Components/log-in-page/log-in-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VideoPageComponent } from './Components/video-page/video-page.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/Login',pathMatch:'full'},
@@ -33,7 +34,8 @@ const routes: Routes = [
   {path:'Features', component: FeaturesComponent},
   {path:'About', component: AboutComponent},
   {path:'Profile', component: ProfileComponent},
-  {path:'ProfileP', component: ProfilePageComponent}
+  {path:'ProfileP', component: ProfilePageComponent},
+  {path:'Videos', component: VideoPageComponent}
 ];
 
 @NgModule({
@@ -50,7 +52,8 @@ const routes: Routes = [
     LUNAMainComponent,
     ProfileComponent,
     ProfilePageComponent,
-    LogInPageComponent
+    LogInPageComponent,
+    VideoPageComponent
   ],
   imports: [
     BrowserModule,
