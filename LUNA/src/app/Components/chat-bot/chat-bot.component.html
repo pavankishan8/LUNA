@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div>
+    <div id="rest_Area" class="spinner-div">
+        <div  class="container">
+            <ngx-spinner>
+                <div class="loader">
+                    <span>LUNA</span>
+                    <span>LUNA</span>
+                </div>
+            </ngx-spinner>
+            <div *ngFor="let message of messages" class="chat-bubble">
+                <br>
+                <div class="inputBubble">
+                  <p>{{ message.input }}</p>
+                  <span class="timestamp">{{ message.timestamp | date }}</span>
+                </div>
+                <br>
+                <div class="outputBubble">
+                  <p>{{ message.output }}</p>
+                  <span class="timestamp">{{ message.timestamp | date }}</span>
+                </div>
+              </div>
+            
+              <div class="textArea">
+                    <input class="form-control" type="text" placeholder="Send a message." [(ngModel)]="searchTxtVal" id="input-text" name="input-text">
+                    <button id="askMe" class="btn btn-primary" type="button" (click)="getResult()">Ask Luna</button>
+              </div>
+            </div>
+</div>
