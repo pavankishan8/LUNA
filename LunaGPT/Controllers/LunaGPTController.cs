@@ -27,6 +27,7 @@ namespace OpenAIApp.Controllers
                     response = item.Text;
                 }
                 return Ok(response);
+                //Pavan
             }
             else
             {
