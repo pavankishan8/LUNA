@@ -24,6 +24,11 @@ import { LogInPageComponent } from './Components/log-in-page/log-in-page.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoPageComponent } from './Components/video-page/video-page.component';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+
 const routes: Routes = [
   {path:'',redirectTo:'/Login',pathMatch:'full'},
   {path:'Login', component: LogInPageComponent},
@@ -62,7 +67,11 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatSelectModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
