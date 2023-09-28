@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener, Input } from '@angular/core';
+import dayjs from 'dayjs/esm';
+import utc from 'dayjs/esm/plugin/utc';
+import { DaterangepickerDirective } from 'ngx-daterangepicker-material';
+import { ChosenDate, DaterangepickerComponent, TimePeriod } from 'ngx-daterangepicker-material/daterangepicker.component';
+dayjs.extend(utc);
 
 @Component({
   selector: 'app-features',
@@ -6,5 +11,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./features.component.css']
 })
 export class FeaturesComponent {
+  
+  @ViewChild(DaterangepickerDirective, { static: true }) pickerDirective: DaterangepickerDirective;
+  selected: { startDate: dayjs.Dayjs; endDate: dayjs.Dayjs } | undefined;
+  selectedValue: any;
+  ranges: any = {
+    'Today': [dayjs(), dayjs()],
+    'Yesterday': [dayjs().subtract(1, 'days'), dayjs().subtract(1, 'days')],
+    'Last 7 Days': [dayjs().subtract(6, 'days'), dayjs()],
+    'Last 30 Days': [dayjs().subtract(29, 'days'), dayjs()],
+    'This Month': [dayjs().startOf('month'), dayjs().endOf('month')],
+    'Last Month': [dayjs().subtract(1, 'month').startOf('month'), dayjs().subtract(1, 'month').endOf('month')],
+  };
 
+  constructor() {
+    this.selected = undefined;
+  }
+
+  open(e: MouseEvent): void {
+    this.pickerDirective.open(e);
+  }
 }
