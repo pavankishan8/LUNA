@@ -10,7 +10,7 @@ import { ChatBotComponent } from './Components/chat-bot/chat-bot.component';
 import { AngBotComponent } from './Components/ang-bot/ang-bot.component';
 import { ProfilePageComponent } from './Components/profile-page/profile-page.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { FeaturesComponent } from './Components/features/features.component';
@@ -28,6 +28,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { NgFor } from '@angular/common';
 
 const routes: Routes = [
   {path:'',redirectTo:'/Login',pathMatch:'full'},
@@ -71,7 +79,15 @@ const routes: Routes = [
     MatDatepickerModule,
     MatInputModule,
     MatSelectModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTableModule,
+    MatTabsModule,
+    NgxDaterangepickerMd.forRoot(),
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    NgFor,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
