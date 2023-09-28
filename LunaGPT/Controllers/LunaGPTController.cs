@@ -4,6 +4,7 @@ using System.Net.Http;
 using OpenAI_API.Completions;
 using OpenAI_API;
 using System.Linq;
+using System;
 
 namespace OpenAIApp.Controllers
 {
@@ -12,27 +13,35 @@ namespace OpenAIApp.Controllers
         [HttpGet]
         public async Task<IHttpActionResult> GetData(string request)
         {
-            string apiKey = "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";
+            string apiKey = "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";
             string response = "";
             OpenAIAPI openai = new OpenAIAPI(apiKey);
             CompletionRequest completion = new CompletionRequest();
             completion.Prompt = request;
             completion.Model = "text-davinci-003";
             completion.MaxTokens = 4000;
-            var output = await openai.Completions.CreateCompletionAsync(completion);
-            if (output != null)
+            try
             {
-                foreach (var item in output.Completions)
+                var output = await openai.Completions.CreateCompletionAsync(completion);
+                if (output != null)
                 {
-                    response = item.Text;
+                    foreach (var item in output.Completions)
+                    {
+                        response = item.Text;
+                    }
+                    return Ok(response);
                 }
-                return Ok(response);
-                //Pavan
+                else
+                {
+                    return BadRequest("No output from OpenAI API");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return BadRequest("Not found");
+                // Log the exception details or print them for debugging
+                return InternalServerError(ex);
             }
+
         }
     }
 }
