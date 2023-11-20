@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav1">
-    <a class="navbar-brand" routerLink="/LUNA"><b>LUNA</b></a>
+  <span style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"><b>LUNA &nbsp;</b></span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +24,36 @@
           <a class="nav-link" routerLink="/About">About</a>
         </li>
     </ul>
-</div>
-<a class="nav-link" routerLink="/Profile" style="float:right; margin-right: 15px;"><i class="fa-solid fa-user"></i> Profile</a>
+    </div>
+    <a class="nav-link" routerLink="/Profile" style="float:right; margin-right: 15px;"><i class="fa-solid fa-user"></i> Profile</a>
+
   </nav>
   
+<nav>
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header d-flex justify-content-between align-items-center">
+            <span class="offcanvas-title" style="font-size: 25px;" id="offcanvasDarkNavbarLabel">LUNA</span>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="d-flex" role="search" style="padding: 10px;">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="nav-link active" aria-current="page" style="font-size: 16px;">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link active" aria-current="page" style="font-size: 16px;">Link</button>
+                    </li>
+                    <li>
+                        <button class="nav-link active" aria-current="page" style="font-size: 16px;">About</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+</nav>
+<div class="cards" style="border: 2px solid red;"></div>
