@@ -1,0 +1,22 @@
+.header{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo{
+    margin: 0.5%;
+    
+}
+
+.firstDiv{
+    border-right: 2px solid white;
+}
+
+.logimg{
+    width: 12%;
+}
+
+.nextDiv{
+    display: grid;
+}

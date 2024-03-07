@@ -1,14 +1,112 @@
 <app-nav-bar></app-nav-bar>
-<div class="row">
-    <div class="col s6">
-        <input type="text" ngxDaterangepickerMd [(ngModel)]="selectedValue" class="form-control" placeholder="Choose date"
-            [showDropdowns]="true" [lockStartDate]="false" [customRangeDirection]="false" [ranges]="ranges" [timePicker]="true"
-            [showCustomRangeLabel]="true" />
+<br>
+<div style="display: flex; align-items: baseline; justify-content: space-evenly; gap: 0.7%;
+margin-left: 1%;
+margin-right: 1%;">
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #d32f2f;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path [attr.d]="'M 0 ' + (100 - percentageValue) + ' Q 20 ' + (80 - percentageValue) + ' 40 ' + (100 - percentageValue) + ' Q 60 ' + (120 - percentageValue) + ' 80 ' + (100 - percentageValue) + ' Q 100 ' + (80 - percentageValue) + ' 100 ' + (100 - percentageValue) + ' L 100 100 L 0 100 Z'" fill="brown"></path>
+                  </svg>             
+            </mat-card-content>
+          </mat-card>
     </div>
-    <div class="col s6 right-align">
-        <br />
-        <button type="button" style="background-color: aqua; width: auto;" class="ngx-daterangepicker-action waves-effect waves-light btn" (click)="open($event)">
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>
-        </button>
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #f26522;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path [attr.d]="'M 0 ' + (100 - percentageValue2) + ' Q 20 ' + (80 - percentageValue2) + ' 40 ' + (100 - percentageValue2) + ' Q 60 ' + (120 - percentageValue2) + ' 80 ' + (100 - percentageValue2) + ' Q 100 ' + (80 - percentageValue2) + ' 100 ' + (100 - percentageValue2) + ' L 100 100 L 0 100 Z'" fill="brown"></path>
+                  </svg> 
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #00a651;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path [attr.d]="'M 0 ' + (100 - percentageValue3) + ' Q 20 ' + (80 - percentageValue3) + ' 40 ' + (100 - percentageValue3) + ' Q 60 ' + (120 - percentageValue3) + ' 80 ' + (100 - percentageValue3) + ' Q 100 ' + (80 - percentageValue3) + ' 100 ' + (100 - percentageValue3) + ' L 100 100 L 0 100 Z'" fill="brown"></path>
+                  </svg> 
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #536dfe;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path [attr.d]="'M 0 ' + (100 - percentageValue4) + ' Q 20 ' + (80 - percentageValue4) + ' 40 ' + (100 - percentageValue4) + ' Q 60 ' + (120 - percentageValue4) + ' 80 ' + (100 - percentageValue4) + ' Q 100 ' + (80 - percentageValue4) + ' 100 ' + (100 - percentageValue4) + ' L 100 100 L 0 100 Z'" fill="brown"></path>
+                  </svg> 
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #ffcc00;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+              {{longText}}
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #566d7f;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+              {{longText}}
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div style="width: 15%;">
+        <mat-card class="example-card" style="background-color: #d98fd1;">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Small</mat-card-subtitle>
+                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+              {{longText}}
+            </mat-card-content>
+          </mat-card>
     </div>
 </div>
