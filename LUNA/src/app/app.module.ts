@@ -10,7 +10,7 @@ import { ChatBotComponent } from './Components/chat-bot/chat-bot.component';
 import { AngBotComponent } from './Components/ang-bot/ang-bot.component';
 import { ProfilePageComponent } from './Components/profile-page/profile-page.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { FeaturesComponent } from './Components/features/features.component';
@@ -22,6 +22,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { LogInPageComponent } from './Components/log-in-page/log-in-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VideoPageComponent } from './Components/video-page/video-page.component';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { NgFor } from '@angular/common';
 
 const routes: Routes = [
   {path:'',redirectTo:'/Login',pathMatch:'full'},
@@ -33,7 +49,8 @@ const routes: Routes = [
   {path:'Features', component: FeaturesComponent},
   {path:'About', component: AboutComponent},
   {path:'Profile', component: ProfileComponent},
-  {path:'ProfileP', component: ProfilePageComponent}
+  {path:'ProfileP', component: ProfilePageComponent},
+  {path:'Videos', component: VideoPageComponent}
 ];
 
 @NgModule({
@@ -50,7 +67,8 @@ const routes: Routes = [
     LUNAMainComponent,
     ProfileComponent,
     ProfilePageComponent,
-    LogInPageComponent
+    LogInPageComponent,
+    VideoPageComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +77,21 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatSelectModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatTabsModule,
+    NgxDaterangepickerMd.forRoot(),
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    NgFor,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

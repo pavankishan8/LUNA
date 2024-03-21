@@ -1,1 +1,26 @@
 <app-nav-bar></app-nav-bar>
+<div>
+  <ul>
+    <li *ngFor="let item of values">{{ item }}</li>
+  </ul>
+</div>
+
+<div style="text-align: center;">
+
+  <mat-form-field>
+    <div class="dontknow">
+      <input matInput [(ngModel)]="typedValue" (keyup.enter)="addValue()">
+      <button class="btn btn-primary" style="border: 2px solid white;" (click)="addValue()">Print</button>
+    </div>
+  </mat-form-field>
+
+</div>
+
+<div>
+  <p>{{ paragraph }}</p>
+  <textarea style="width: 100%;" [(ngModel)]="userInput" (focus)="startTimer()" (input)="onInputChange()" placeholder="Type the text here..."></textarea>
+</div>
+
+<div *ngIf="elapsedTime !== undefined && userInput !== ''">
+  <p>Time taken to type correct text: {{ elapsedTime }} seconds</p>
+</div>

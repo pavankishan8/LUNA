@@ -51,11 +51,11 @@
   flex-wrap: wrap;
 }
 
-.navbarc{
-  margin-left: 20px;
-}
+  .navbarc{
+    margin-left: 20px;
+  }
 
-.loader {
+  .loader {
     position: relative;
   }
   
