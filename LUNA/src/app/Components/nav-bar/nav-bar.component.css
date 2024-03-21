@@ -7,3 +7,14 @@
     color: white;
     text-decoration: none;
 }
+
+.chatwindow{
+    width: 25%;
+    position: fixed; 
+    bottom: 9%; 
+    right: 1%; 
+    background-color: white; 
+    border-radius: 5px; 
+    border: 1px solid black; 
+    z-index: 1;
+}

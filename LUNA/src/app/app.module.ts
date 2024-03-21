@@ -32,6 +32,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -89,7 +90,8 @@ const routes: Routes = [
     NgFor,
     ReactiveFormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

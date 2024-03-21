@@ -30,7 +30,7 @@
   </nav>
   
 <nav>
-        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas offcanvas-start text-bg-dark" style="background-color: #17162e !important" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
           <div class="offcanvas-header d-flex justify-content-between align-items-center">
             <span class="offcanvas-title" style="font-size: 25px;" id="offcanvasDarkNavbarLabel">LUNA</span>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -42,13 +42,13 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button class="nav-link active" aria-current="page" style="font-size: 16px;">Home</button>
+                        <button class="nav-link active" aria-current="page" routerLink="/Home" style="font-size: 16px;">Home</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link active" aria-current="page" style="font-size: 16px;">Link</button>
+                        <button class="nav-link active" aria-current="page" routerLink="/GPT" style="font-size: 16px;">GPT</button>
                     </li>
                     <li>
-                        <button class="nav-link active" aria-current="page" style="font-size: 16px;">About</button>
+                        <button class="nav-link active" aria-current="page" routerLink="/About" style="font-size: 16px;">About</button>
                     </li>
                 </ul>
             </div>
@@ -57,3 +57,22 @@
 
 </nav>
 <div class="cards" style="border: 2px solid red;"></div>
+<div style="position: fixed; bottom: 3.5%; right: 1.5%;" (click)="toggleChatWindow()">
+  <i class="fa-solid fa-comment-dots" style="color: blue; font-size: 30px;"></i>
+</div>
+
+<!-- chat.component.html -->
+<div class="chatwindow" *ngIf="showChat">
+  <div style="background-color: blue; padding: 2%;" class="chat-messages">
+    <div style="color: white; font-weight: 500;">Message</div>
+  </div>
+  <br>
+  <div style="padding-left: 1%; padding-right: 1%; padding-bottom: 1%; padding-top: 0.5%;">
+  <div style="width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 3%;">
+    <mat-form-field style="width: 100%;" class="example-full-width">
+      <input matInput placeholder="Type your message here...">
+    </mat-form-field>
+    <button mat-raised-button style="background-color: blue; color: white;" color="accent">Clear</button>
+  </div>
+  </div>
+</div>
